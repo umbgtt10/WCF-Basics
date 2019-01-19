@@ -29,6 +29,7 @@ namespace ConsoleHost
             host.Description.Behaviors.Add(behaviour);
             */
 
+
             var httpMex = host.AddServiceEndpoint(
                 typeof(IMetadataExchange),
                 MetadataExchangeBindings.CreateMexHttpBinding(), 
