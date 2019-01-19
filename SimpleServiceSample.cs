@@ -4,7 +4,6 @@ using System.Linq;
 
 namespace TestService
 {
-
     public class SimpleServiceSample : ServiceSample
     {
         public List<Country> GetCountries()

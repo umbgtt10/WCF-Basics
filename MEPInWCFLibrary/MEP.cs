@@ -18,10 +18,10 @@ namespace MEPInWCFLibrary
             {
                 MailMessage mail = new MailMessage();
 
-                mail.From = new MailAddress("md.manzoorahmed@gmail.com");
+                mail.From = new MailAddress("umberto.gotti@gmail.com");
                 mail.To.Add(ToAddress);
-                mail.Subject = "Welcome To New Course";
-                mail.Body = "Hi, We Heartly welcome you to new learnings";
+                mail.Subject = "Subject";
+                mail.Body = "Body";
 
                 SmtpClient client = new SmtpClient();
                 client.Port = 587;
@@ -31,17 +31,15 @@ namespace MEPInWCFLibrary
                 client.Timeout = 10000;
                 client.DeliveryMethod = SmtpDeliveryMethod.Network;
                 client.UseDefaultCredentials = false;
-                client.Credentials = new System.Net.NetworkCredential("md.manzoorahmed@gmail.com", "XXXXXXXXXXXXXXXXXXXXX");
+                client.Credentials = new System.Net.NetworkCredential("umberto.gotti@gmail.com", "XXXXXXXXXXXXXXXXXXXXX");
 
-                // client.Send(mail);
+                client.Send(mail);
 
                 var cb = OperationContext.Current.GetCallbackChannel<IMEPCallBack>();
                 cb.SendEmailCallBack(ToAddress);
             }
             catch (Exception Ex)
             {
-
-
                 throw new FaultException(Ex.Message);
             }
         }
