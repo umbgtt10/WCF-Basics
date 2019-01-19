@@ -43,37 +43,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoursesServiceLibrary", "Co
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Messaging", "Messaging", "{33DDC4CF-61BF-4AB8-A60C-818FFBD46104}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MEPInWCF", "MEPInWCF\MEPInWCF\MEPInWCF.csproj", "{99F0B340-99D4-487C-8E8B-300488BD29DC}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MEPInWCFLibrary", "MEPInWCFLibrary\MEPInWCFLibrary.csproj", "{A167E3BA-3900-4845-BA04-6D7BB50CF91E}"
-EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "MEPClient", "MEPClient\", "{47057EA4-425A-47DC-8D95-9311F7CC92FA}"
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.1"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_56714"
-		Debug.AspNetCompiler.PhysicalPath = "MEPClient\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_56714\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_56714"
-		Release.AspNetCompiler.PhysicalPath = "MEPClient\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_56714\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "56714"
-		SlnRelativePath = "MEPClient\"
-		DefaultWebSiteLanguage = "Visual C#"
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DbScript", "DbScript", "{22D0FC5F-6F3E-4C93-AD4B-C39A2462D1C7}"
-	ProjectSection(SolutionItems) = preProject
-		script.sql = script.sql
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleServiceLib", "Introduction\SampleServiceLib\SampleServiceLib.csproj", "{2DE34C9D-3211-4E20-8F57-5567AE609554}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleClient", "Introduction\SampleClient\SampleClient.csproj", "{961B3DC1-3D8E-4595-9919-87869C4AC205}"
@@ -114,6 +83,38 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "MultiplicationServiceClient
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageExchangePatternsLibrary", "Messaging\MessageExchangePatternsLibrary\MessageExchangePatternsLibrary.csproj", "{A167E3BA-3900-4845-BA04-6D7BB50CF91E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DbScript", "DbScript", "{0D076AB3-C5CB-4AC7-95D7-2DCB0EEDD4E3}"
+	ProjectSection(SolutionItems) = preProject
+		Messaging\DbScript\script.sql = Messaging\DbScript\script.sql
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "MessageExchangeClient", "Messaging\MessageExchangeClient\", "{DEDB7F81-C8AE-4274-90F5-F308BE214823}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.1"
+		ProjectReferences = "{a167e3ba-3900-4845-ba04-6d7bb50cf91e}|MEPInWCFLibrary.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_58581"
+		Debug.AspNetCompiler.PhysicalPath = "Messaging\MessageExchangeClient\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_58581\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_58581"
+		Release.AspNetCompiler.PhysicalPath = "Messaging\MessageExchangeClient\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_58581\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "58581"
+		SlnRelativePath = "Messaging\MessageExchangeClient\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageExchangePatternsHost", "Messaging\MessageExchangePatternsHost\MessageExchangePatternsHost.csproj", "{99F0B340-99D4-487C-8E8B-300488BD29DC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -144,18 +145,6 @@ Global
 		{D75D77EB-5B13-48A6-BDA0-E8BF317C418B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D75D77EB-5B13-48A6-BDA0-E8BF317C418B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D75D77EB-5B13-48A6-BDA0-E8BF317C418B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{99F0B340-99D4-487C-8E8B-300488BD29DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{99F0B340-99D4-487C-8E8B-300488BD29DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{99F0B340-99D4-487C-8E8B-300488BD29DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{99F0B340-99D4-487C-8E8B-300488BD29DC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A167E3BA-3900-4845-BA04-6D7BB50CF91E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A167E3BA-3900-4845-BA04-6D7BB50CF91E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A167E3BA-3900-4845-BA04-6D7BB50CF91E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A167E3BA-3900-4845-BA04-6D7BB50CF91E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{47057EA4-425A-47DC-8D95-9311F7CC92FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{47057EA4-425A-47DC-8D95-9311F7CC92FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{47057EA4-425A-47DC-8D95-9311F7CC92FA}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{47057EA4-425A-47DC-8D95-9311F7CC92FA}.Release|Any CPU.Build.0 = Debug|Any CPU
 		{2DE34C9D-3211-4E20-8F57-5567AE609554}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2DE34C9D-3211-4E20-8F57-5567AE609554}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2DE34C9D-3211-4E20-8F57-5567AE609554}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -192,6 +181,18 @@ Global
 		{6DBEEF41-9817-494D-B98A-8AFD94506EFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6DBEEF41-9817-494D-B98A-8AFD94506EFC}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{6DBEEF41-9817-494D-B98A-8AFD94506EFC}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{A167E3BA-3900-4845-BA04-6D7BB50CF91E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A167E3BA-3900-4845-BA04-6D7BB50CF91E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A167E3BA-3900-4845-BA04-6D7BB50CF91E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A167E3BA-3900-4845-BA04-6D7BB50CF91E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEDB7F81-C8AE-4274-90F5-F308BE214823}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEDB7F81-C8AE-4274-90F5-F308BE214823}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEDB7F81-C8AE-4274-90F5-F308BE214823}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEDB7F81-C8AE-4274-90F5-F308BE214823}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{99F0B340-99D4-487C-8E8B-300488BD29DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99F0B340-99D4-487C-8E8B-300488BD29DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99F0B340-99D4-487C-8E8B-300488BD29DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99F0B340-99D4-487C-8E8B-300488BD29DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -203,10 +204,6 @@ Global
 		{42E841ED-6E2D-4262-BB65-FF842DB02162} = {2A60003C-E8EE-4ED9-86E2-AFD0DE93981E}
 		{E135D112-5E2F-4192-AA7C-95E9AE2AE8F8} = {2A60003C-E8EE-4ED9-86E2-AFD0DE93981E}
 		{D75D77EB-5B13-48A6-BDA0-E8BF317C418B} = {2A60003C-E8EE-4ED9-86E2-AFD0DE93981E}
-		{99F0B340-99D4-487C-8E8B-300488BD29DC} = {33DDC4CF-61BF-4AB8-A60C-818FFBD46104}
-		{A167E3BA-3900-4845-BA04-6D7BB50CF91E} = {33DDC4CF-61BF-4AB8-A60C-818FFBD46104}
-		{47057EA4-425A-47DC-8D95-9311F7CC92FA} = {33DDC4CF-61BF-4AB8-A60C-818FFBD46104}
-		{22D0FC5F-6F3E-4C93-AD4B-C39A2462D1C7} = {33DDC4CF-61BF-4AB8-A60C-818FFBD46104}
 		{2DE34C9D-3211-4E20-8F57-5567AE609554} = {DA517FEE-838A-4B67-866C-A880A0AABA88}
 		{961B3DC1-3D8E-4595-9919-87869C4AC205} = {DA517FEE-838A-4B67-866C-A880A0AABA88}
 		{55283320-83D1-49A1-86E9-18B38A8B853C} = {DA517FEE-838A-4B67-866C-A880A0AABA88}
@@ -216,6 +213,10 @@ Global
 		{A2AB20E7-207D-4EEF-B069-45B152077F76} = {65222E40-46A4-43A9-8086-E178D2046633}
 		{9A870C40-712E-4C07-BB2B-2B54721601F6} = {65222E40-46A4-43A9-8086-E178D2046633}
 		{6DBEEF41-9817-494D-B98A-8AFD94506EFC} = {65222E40-46A4-43A9-8086-E178D2046633}
+		{A167E3BA-3900-4845-BA04-6D7BB50CF91E} = {33DDC4CF-61BF-4AB8-A60C-818FFBD46104}
+		{0D076AB3-C5CB-4AC7-95D7-2DCB0EEDD4E3} = {33DDC4CF-61BF-4AB8-A60C-818FFBD46104}
+		{DEDB7F81-C8AE-4274-90F5-F308BE214823} = {33DDC4CF-61BF-4AB8-A60C-818FFBD46104}
+		{99F0B340-99D4-487C-8E8B-300488BD29DC} = {33DDC4CF-61BF-4AB8-A60C-818FFBD46104}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {95E62836-FAB0-450B-9353-2300D582A218}
