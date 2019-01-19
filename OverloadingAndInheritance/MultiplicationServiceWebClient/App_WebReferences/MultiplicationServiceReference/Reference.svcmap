@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4a78e5f7-14fc-4bc3-8528-662c74bf8d03" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:6790/MyHttpEndpoint" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MyHttpEndpoint.xsd" MetadataType="Schema" ID="6d0d699e-fa45-4e7b-9846-19916fd1f378" SourceId="1" SourceUrl="http://localhost:6790/MyHttpEndpoint?xsd=xsd2" />
+    <MetadataFile FileName="SimpleMultiplicationService.wsdl" MetadataType="Wsdl" ID="e03fbe8f-ebd5-412c-b701-0e6a6f1be28a" SourceId="1" SourceUrl="http://localhost:6790/MyHttpEndpoint?wsdl" />
+    <MetadataFile FileName="MyHttpEndpoint1.xsd" MetadataType="Schema" ID="1507bf05-320f-4691-bdc3-f48503721b01" SourceId="1" SourceUrl="http://localhost:6790/MyHttpEndpoint?xsd=xsd0" />
+    <MetadataFile FileName="MyHttpEndpoint2.xsd" MetadataType="Schema" ID="0807dbc1-1f62-4029-89fa-3ca785bdb7f3" SourceId="1" SourceUrl="http://localhost:6790/MyHttpEndpoint?xsd=xsd1" />
+    <MetadataFile FileName="MyHttpEndpoint.disco" MetadataType="Disco" ID="3b16545f-7a06-4f79-aeb0-b2f1b34fbac5" SourceId="1" SourceUrl="http://localhost:6790/MyHttpEndpoint?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
