@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using HttpReference;
+using MultiplicationServiceReference;
 
 public partial class MultiplicationServiceForm : System.Web.UI.Page
 {
@@ -15,7 +15,7 @@ public partial class MultiplicationServiceForm : System.Web.UI.Page
 
     protected void Button1_Click(object sender, EventArgs e)
     {
-        var client = new MultiplicationServiceClient("BasicHttpBinding_MultiplicationService");
+        var client = new MultiplicationServiceClient("BasicHttpBinding_MultiplicationService1");
 
         Response.Write(client.Multiply(5, 5));
     }

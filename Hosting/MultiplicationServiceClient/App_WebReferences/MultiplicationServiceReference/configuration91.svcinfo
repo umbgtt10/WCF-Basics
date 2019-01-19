@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="Ilt/uDq1rfdhu9s1roCtGYsqAjo=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="wn1jhyJjbjEkAtBB+O4DBa+wH/0=">
   <bindingConfigurations>
-    <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_MultiplicationService">
+    <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_MultiplicationService1">
       <properties>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>BasicHttpBinding_MultiplicationService</serializedValue>
+          <serializedValue>BasicHttpBinding_MultiplicationService1</serializedValue>
         </property>
         <property path="/closeTimeout" isComplexType="false" isExplicitlyDefined="true" clrType="System.TimeSpan, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -110,10 +110,10 @@
         </property>
       </properties>
     </bindingConfiguration>
-    <bindingConfiguration bindingType="netTcpBinding" name="NetTcpBinding_MultiplicationService">
+    <bindingConfiguration bindingType="netTcpBinding" name="NetTcpBinding_MultiplicationService2">
       <properties>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>NetTcpBinding_MultiplicationService</serializedValue>
+          <serializedValue>NetTcpBinding_MultiplicationService2</serializedValue>
         </property>
         <property path="/closeTimeout" isComplexType="false" isExplicitlyDefined="true" clrType="System.TimeSpan, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -228,10 +228,10 @@
         </property>
       </properties>
     </bindingConfiguration>
-    <bindingConfiguration bindingType="netTcpBinding" name="NetTcpBinding_MultiplicationService1">
+    <bindingConfiguration bindingType="netTcpBinding" name="NetTcpBinding_MultiplicationService11">
       <properties>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>NetTcpBinding_MultiplicationService1</serializedValue>
+          <serializedValue>NetTcpBinding_MultiplicationService11</serializedValue>
         </property>
         <property path="/closeTimeout" isComplexType="false" isExplicitlyDefined="true" clrType="System.TimeSpan, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -348,7 +348,7 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="NetTcpBinding_MultiplicationService" contract="HttpReference.MultiplicationService" bindingType="netTcpBinding" address="net.tcp://localhost:9090/MyTcpEndpoint" bindingConfiguration="NetTcpBinding_MultiplicationService">
+    <endpoint name="NetTcpBinding_MultiplicationService2" contract="MultiplicationServiceReference.MultiplicationService" bindingType="netTcpBinding" address="net.tcp://localhost:9090/MyTcpEndpoint" bindingConfiguration="NetTcpBinding_MultiplicationService2">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>net.tcp://localhost:9090/MyTcpEndpoint</serializedValue>
@@ -360,10 +360,10 @@
           <serializedValue>netTcpBinding</serializedValue>
         </property>
         <property path="/bindingConfiguration" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>NetTcpBinding_MultiplicationService</serializedValue>
+          <serializedValue>NetTcpBinding_MultiplicationService2</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>HttpReference.MultiplicationService</serializedValue>
+          <serializedValue>MultiplicationServiceReference.MultiplicationService</serializedValue>
         </property>
         <property path="/headers" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.AddressHeaderCollectionElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.AddressHeaderCollectionElement</serializedValue>
@@ -423,7 +423,7 @@
           <serializedValue>False</serializedValue>
         </property>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>NetTcpBinding_MultiplicationService</serializedValue>
+          <serializedValue>NetTcpBinding_MultiplicationService2</serializedValue>
         </property>
         <property path="/kind" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -433,7 +433,7 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="NetTcpBinding_MultiplicationService1" contract="HttpReference.MultiplicationService" bindingType="netTcpBinding" address="net.tcp://localhost:6789/MyTcpEndpoint" bindingConfiguration="NetTcpBinding_MultiplicationService1">
+    <endpoint name="NetTcpBinding_MultiplicationService11" contract="MultiplicationServiceReference.MultiplicationService" bindingType="netTcpBinding" address="net.tcp://localhost:6789/MyTcpEndpoint" bindingConfiguration="NetTcpBinding_MultiplicationService11">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>net.tcp://localhost:6789/MyTcpEndpoint</serializedValue>
@@ -445,10 +445,10 @@
           <serializedValue>netTcpBinding</serializedValue>
         </property>
         <property path="/bindingConfiguration" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>NetTcpBinding_MultiplicationService1</serializedValue>
+          <serializedValue>NetTcpBinding_MultiplicationService11</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>HttpReference.MultiplicationService</serializedValue>
+          <serializedValue>MultiplicationServiceReference.MultiplicationService</serializedValue>
         </property>
         <property path="/headers" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.AddressHeaderCollectionElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.AddressHeaderCollectionElement</serializedValue>
@@ -508,7 +508,7 @@
           <serializedValue>False</serializedValue>
         </property>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>NetTcpBinding_MultiplicationService1</serializedValue>
+          <serializedValue>NetTcpBinding_MultiplicationService11</serializedValue>
         </property>
         <property path="/kind" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -518,7 +518,7 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="BasicHttpBinding_MultiplicationService" contract="HttpReference.MultiplicationService" bindingType="basicHttpBinding" address="http://localhost:6790/MyHttpEndpoint" bindingConfiguration="BasicHttpBinding_MultiplicationService">
+    <endpoint name="BasicHttpBinding_MultiplicationService1" contract="MultiplicationServiceReference.MultiplicationService" bindingType="basicHttpBinding" address="http://localhost:6790/MyHttpEndpoint" bindingConfiguration="BasicHttpBinding_MultiplicationService1">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>http://localhost:6790/MyHttpEndpoint</serializedValue>
@@ -530,10 +530,10 @@
           <serializedValue>basicHttpBinding</serializedValue>
         </property>
         <property path="/bindingConfiguration" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>BasicHttpBinding_MultiplicationService</serializedValue>
+          <serializedValue>BasicHttpBinding_MultiplicationService1</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>HttpReference.MultiplicationService</serializedValue>
+          <serializedValue>MultiplicationServiceReference.MultiplicationService</serializedValue>
         </property>
         <property path="/headers" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.AddressHeaderCollectionElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.AddressHeaderCollectionElement</serializedValue>
@@ -593,7 +593,7 @@
           <serializedValue>False</serializedValue>
         </property>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>BasicHttpBinding_MultiplicationService</serializedValue>
+          <serializedValue>BasicHttpBinding_MultiplicationService1</serializedValue>
         </property>
         <property path="/kind" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
