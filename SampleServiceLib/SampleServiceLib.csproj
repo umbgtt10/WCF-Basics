@@ -8,8 +8,8 @@
     <ProjectGuid>{2DE34C9D-3211-4E20-8F57-5567AE609554}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TestService</RootNamespace>
-    <AssemblyName>TestService</AssemblyName>
+    <RootNamespace>SampleServiceLib</RootNamespace>
+    <AssemblyName>SampleServiceLib</AssemblyName>
     <ProjectTypeGuids>{3D9AD99F-2412-4246-B90B-4EAA41C64699};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <StartArguments>/client:"WcfTestClient.exe"</StartArguments>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>

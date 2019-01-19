@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace TestService
+namespace SampleServiceLib
 {
     [DataContract]
     public class Country

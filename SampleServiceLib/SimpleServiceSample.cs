@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace TestService
+namespace SampleServiceLib
 {
     public class SimpleServiceSample : ServiceSample
     {

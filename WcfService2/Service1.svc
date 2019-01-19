@@ -1,1 +1,1 @@
-﻿<%@ ServiceHost Service="TestService.SimpleServiceSample" %>
+﻿<%@ ServiceHost Service="SampleServiceLib.SimpleServiceSample" %>

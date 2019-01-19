@@ -5,7 +5,7 @@ using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TestService
+namespace SampleServiceLib
 {
     [ServiceContract]
     interface ServiceSample

@@ -82,9 +82,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TestService.csproj">
+    <ProjectReference Include="..\SampleServiceLib\SampleServiceLib.csproj">
       <Project>{2de34c9d-3211-4e20-8f57-5567ae609554}</Project>
-      <Name>TestService</Name>
+      <Name>SampleServiceLib</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
