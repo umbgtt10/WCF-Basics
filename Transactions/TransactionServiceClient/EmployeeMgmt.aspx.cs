@@ -22,12 +22,19 @@ namespace TransactionServiceClient
                 var TS = new EmployeeSalaryClient();
                 using (TransactionScope Trs = new TransactionScope())
                 {
-                    int id=TS.CreateEmployee(new Employee() { EName = txtEmployeeName.Text, ESalary = double.Parse(txtEmployeeSalary.Text) });
-                    if (id != 0)
+                    TS.CreateEmployee(new Employee()
                     {
-                        TS.CreateSalaryHistory(new SalaryHistory() { Eid = id, ESalary = double.Parse(txtEmployeeSalary.Text), StDate = DateTime.Now, EdDate = null });
-                    }
-                        Trs.Complete();
+                        EName = txtEmployeeName.Text,
+                        ESalary = double.Parse(txtEmployeeSalary.Text)
+                    });
+
+                    TS.CreateSalaryHistory(new SalaryHistory()
+                    {
+                        ESalary = double.Parse(txtEmployeeSalary.Text),
+                        StDate = DateTime.Now,
+                        EdDate = null
+                    });
+                    Trs.Complete();
                 }
             }
             catch (Exception)

@@ -205,10 +205,10 @@ namespace TransactionServiceClient.TransactionServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeSalary/CreateEmployee", ReplyAction="http://tempuri.org/IEmployeeSalary/CreateEmployeeResponse")]
         [System.ServiceModel.TransactionFlowAttribute(System.ServiceModel.TransactionFlowOption.Mandatory)]
-        int CreateEmployee(TransactionServiceClient.TransactionServiceReference.Employee E);
+        void CreateEmployee(TransactionServiceClient.TransactionServiceReference.Employee E);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeSalary/CreateEmployee", ReplyAction="http://tempuri.org/IEmployeeSalary/CreateEmployeeResponse")]
-        System.Threading.Tasks.Task<int> CreateEmployeeAsync(TransactionServiceClient.TransactionServiceReference.Employee E);
+        System.Threading.Tasks.Task CreateEmployeeAsync(TransactionServiceClient.TransactionServiceReference.Employee E);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeSalary/CreateSalaryHistory", ReplyAction="http://tempuri.org/IEmployeeSalary/CreateSalaryHistoryResponse")]
         [System.ServiceModel.TransactionFlowAttribute(System.ServiceModel.TransactionFlowOption.Mandatory)]
@@ -245,11 +245,11 @@ namespace TransactionServiceClient.TransactionServiceReference {
                 base(binding, remoteAddress) {
         }
         
-        public int CreateEmployee(TransactionServiceClient.TransactionServiceReference.Employee E) {
-            return base.Channel.CreateEmployee(E);
+        public void CreateEmployee(TransactionServiceClient.TransactionServiceReference.Employee E) {
+            base.Channel.CreateEmployee(E);
         }
         
-        public System.Threading.Tasks.Task<int> CreateEmployeeAsync(TransactionServiceClient.TransactionServiceReference.Employee E) {
+        public System.Threading.Tasks.Task CreateEmployeeAsync(TransactionServiceClient.TransactionServiceReference.Employee E) {
             return base.Channel.CreateEmployeeAsync(E);
         }
         
