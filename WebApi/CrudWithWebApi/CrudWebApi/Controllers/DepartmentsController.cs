@@ -15,47 +15,90 @@ namespace CrudWebApi.Controllers
         private MyOrgContext _context = new MyOrgContext();
 
         // ..api/Departments
-        public IList<Department> Get()
+        public HttpResponseMessage Get()
         {
-            return _context.Departments.ToList();
+            return Request.CreateResponse<IEnumerable<Department>>(
+                HttpStatusCode.OK,
+                _context.Departments.ToList());
         }
 
         // ..api/Departments/id
-        public Department Get(int id)
+        public HttpResponseMessage Get(int id)
         {
             var department = _context.Departments.Find(id);
 
             if (department == null)
             {
-                return null;
+                return Request.CreateErrorResponse(
+                    HttpStatusCode.NotFound,
+                    $"Department with id:{id} not found.");
             }
             else
             {
-                return department;
+                return Request.CreateResponse(
+                    HttpStatusCode.OK,
+                    department);
             }
         }
 
         // ..api/Departments/id
-        public void Put(int id, Department department)
+        public HttpResponseMessage Put(int id, Department department)
         {
-            var oldDepartment = _context.Departments.Find(id);
-            _context.Entry(oldDepartment).CurrentValues.SetValues(department);
-            _context.SaveChanges();
+            var existingDepartment = _context.Departments.Find(id);
+
+            if (existingDepartment == null)
+            {
+                return Request.CreateErrorResponse(
+                    HttpStatusCode.NotFound,
+                    $"Department with id:{id} not found.");
+            }
+            else
+            {
+                _context.Entry(existingDepartment).CurrentValues.SetValues(department);
+                _context.SaveChanges();
+                return Request.CreateResponse(HttpStatusCode.OK, department);
+            }
         }
 
         // ..api/Departments/id
-        public void Delete(int id)
+        public HttpResponseMessage Delete(int id)
         {
             var department = _context.Departments.Find(id);
-            _context.Departments.Remove(department);
-            _context.SaveChanges();
+
+            if (department == null)
+            {
+                return Request.CreateErrorResponse(
+                    HttpStatusCode.NotFound,
+                    $"Department with id:{id} not found.");
+            }
+            else
+            {
+                _context.Departments.Remove(department);
+                _context.SaveChanges();
+                return Request.CreateResponse(HttpStatusCode.OK, department);
+            }
         }
 
         // ..api/Departments
-        public void Post(Department department)
+        public HttpResponseMessage Post(Department department)
         {
-            _context.Departments.Add(department);
-            _context.SaveChanges();
+            try
+            {
+                _context.Departments.Add(department);
+                _context.SaveChanges();
+                return Request.CreateResponse(HttpStatusCode.Created, department);
+            }
+            catch (Exception e)
+            {
+                var existingDepartment = _context.Departments.Single(d =>
+                    d.DName.Equals(department.DName) && 
+                    d.Gender.Equals(department.Gender) &&
+                    d.HOD.Equals(department.Gender));
+
+                return Request.CreateErrorResponse(
+                    HttpStatusCode.BadRequest, $"Department with id:{existingDepartment.Did} already present.");
+            }
+
         }
     }
 }
