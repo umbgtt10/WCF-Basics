@@ -151,6 +151,32 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudLibrary", "WebApi\CrudW
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudWebApi", "WebApi\CrudWithWebApi\CrudWebApi\CrudWebApi.csproj", "{74036F6D-82E3-451E-95B3-86DF1E105188}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFSecurityLibrary", "Security\WCFSecurityLibrary\WCFSecurityLibrary.csproj", "{3554B7D7-A7B2-449E-94FC-3BEC57EAE668}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFSecuritySelfHost", "Security\WCFSecuritySelfHost\WCFSecuritySelfHost.csproj", "{344D8166-EF77-43D1-B7AE-F667DE312F2C}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WCFSecurityClient", "Security\WCFSecurityClient\", "{20CED0FB-C76A-4085-ACA8-D734C97E1E10}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.1"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_56243"
+		Debug.AspNetCompiler.PhysicalPath = "Security\WCFSecurityClient\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_56243\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_56243"
+		Release.AspNetCompiler.PhysicalPath = "Security\WCFSecurityClient\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_56243\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "56243"
+		SlnRelativePath = "Security\WCFSecurityClient\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -261,6 +287,18 @@ Global
 		{74036F6D-82E3-451E-95B3-86DF1E105188}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74036F6D-82E3-451E-95B3-86DF1E105188}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74036F6D-82E3-451E-95B3-86DF1E105188}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3554B7D7-A7B2-449E-94FC-3BEC57EAE668}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3554B7D7-A7B2-449E-94FC-3BEC57EAE668}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3554B7D7-A7B2-449E-94FC-3BEC57EAE668}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3554B7D7-A7B2-449E-94FC-3BEC57EAE668}.Release|Any CPU.Build.0 = Release|Any CPU
+		{344D8166-EF77-43D1-B7AE-F667DE312F2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{344D8166-EF77-43D1-B7AE-F667DE312F2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{344D8166-EF77-43D1-B7AE-F667DE312F2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{344D8166-EF77-43D1-B7AE-F667DE312F2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20CED0FB-C76A-4085-ACA8-D734C97E1E10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20CED0FB-C76A-4085-ACA8-D734C97E1E10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20CED0FB-C76A-4085-ACA8-D734C97E1E10}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{20CED0FB-C76A-4085-ACA8-D734C97E1E10}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -297,6 +335,9 @@ Global
 		{4FD15741-DE0C-4B64-9BE6-E3FD21EDD810} = {7A02DA89-1CF9-47B9-8B76-A77ACEC35BB0}
 		{5900FE7A-5383-4872-8555-0E33C71F9EFF} = {7A02DA89-1CF9-47B9-8B76-A77ACEC35BB0}
 		{74036F6D-82E3-451E-95B3-86DF1E105188} = {7A02DA89-1CF9-47B9-8B76-A77ACEC35BB0}
+		{3554B7D7-A7B2-449E-94FC-3BEC57EAE668} = {D0E59C92-B873-4AE0-BCE8-D493E28F8208}
+		{344D8166-EF77-43D1-B7AE-F667DE312F2C} = {D0E59C92-B873-4AE0-BCE8-D493E28F8208}
+		{20CED0FB-C76A-4085-ACA8-D734C97E1E10} = {D0E59C92-B873-4AE0-BCE8-D493E28F8208}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {95E62836-FAB0-450B-9353-2300D582A218}
