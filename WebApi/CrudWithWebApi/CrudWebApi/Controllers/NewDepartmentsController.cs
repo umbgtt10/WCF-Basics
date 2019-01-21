@@ -11,6 +11,7 @@ using CrudLibrary;
 
 namespace CrudWebApi.Controllers
 {
+    //[MyException] ==> Applied at controller level
     public class NewDepartmentsController : ApiController
     {
         private MyOrgContext _context = new MyOrgContext();
@@ -24,6 +25,7 @@ namespace CrudWebApi.Controllers
 
         // ..api/Departments/id
         [ResponseType(typeof(Department))]
+        //[MyException] ==> Applied at method/verb level
         public IHttpActionResult Get(int id)
         {
             var department = _context.Departments.Find(id);

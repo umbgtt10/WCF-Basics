@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using CrudWebApi.Controllers;
 
 namespace CrudWebApi
 {
@@ -19,6 +20,8 @@ namespace CrudWebApi
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+            // ==> Applied at app level!
+            config.Filters.Add(new MyExceptionAttribute());
         }
     }
 }
