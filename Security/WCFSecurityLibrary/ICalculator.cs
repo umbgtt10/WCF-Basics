@@ -15,6 +15,9 @@ namespace WCFSecurityLibrary
         int Add(int a, int b);
 
         [OperationContract]
+        int Subtract(int a, int b);
+
+        [OperationContract]
         int Multiply(int a,int b);
     }
 }

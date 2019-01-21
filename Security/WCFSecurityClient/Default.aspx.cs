@@ -18,6 +18,8 @@ public partial class _Default : System.Web.UI.Page
         try
         {
             CalculatorClient cc = new CalculatorClient("NetTcpBinding_ICalculator");
+            cc.ClientCredentials.Windows.ClientCredential.UserName = "desktop-3abooa3\\umberto";
+            cc.ClientCredentials.Windows.ClientCredential.Password = "Francesca10";
             int c = cc.Add(int.Parse(txta.Text), int.Parse(txtb.Text));
             Response.Write(c.ToString());
         }

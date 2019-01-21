@@ -19,7 +19,7 @@ namespace MEPInWCF
 
             var netTcpBinding = new NetTcpBinding();
             netTcpBinding.Security.Mode = SecurityMode.Message;
-            //netTcpBinding.Security.Message.ClientCredentialType = MessageCredentialType.Windows;
+            netTcpBinding.Security.Message.ClientCredentialType = MessageCredentialType.Windows;
             ServiceEndpoint Se = Sh.AddServiceEndpoint(typeof(ICalculator), netTcpBinding, netTcpBaseAddress);
 
             ServiceMetadataBehavior smb = new ServiceMetadataBehavior();
