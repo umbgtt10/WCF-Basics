@@ -1,1 +1,1 @@
-﻿<%@ ServiceHost Service="WCFSecurityLibrary.Calculator" %>
+﻿<%@ ServiceHost Service="WCFSecurityLibraryWeb.Calculator" %>

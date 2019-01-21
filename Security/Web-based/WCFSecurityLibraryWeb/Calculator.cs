@@ -9,11 +9,12 @@ using System.ServiceModel.Description;
 using System.Text;
 using System.Threading;
 
-namespace WCFSecurityLibrary
+namespace WCFSecurityLibraryWeb
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in both code and config file together.
     public class Calculator : ICalculator
     {
+        [PrincipalPermission(SecurityAction.Demand, Role="Admin")]
         public int Add(int a, int b)
         {
             try
