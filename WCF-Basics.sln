@@ -151,31 +151,48 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudLibrary", "WebApi\CrudW
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudWebApi", "WebApi\CrudWithWebApi\CrudWebApi\CrudWebApi.csproj", "{74036F6D-82E3-451E-95B3-86DF1E105188}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFSecurityLibrary", "Security\WCFSecurityLibrary\WCFSecurityLibrary.csproj", "{3554B7D7-A7B2-449E-94FC-3BEC57EAE668}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Windows-based", "Windows-based", "{C43A80A1-AA13-4848-8038-6660FAD575C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFSecuritySelfHost", "Security\WCFSecuritySelfHost\WCFSecuritySelfHost.csproj", "{344D8166-EF77-43D1-B7AE-F667DE312F2C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFSecurityLibrary", "Security\Windows-based\WCFSecurityLibrary\WCFSecurityLibrary.csproj", "{3554B7D7-A7B2-449E-94FC-3BEC57EAE668}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WCFSecurityClient", "Security\WCFSecurityClient\", "{20CED0FB-C76A-4085-ACA8-D734C97E1E10}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFSecuritySelfHost", "Security\Windows-based\WCFSecuritySelfHost\WCFSecuritySelfHost.csproj", "{344D8166-EF77-43D1-B7AE-F667DE312F2C}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WCFSecurityWebClient", "Security\Windows-based\WCFSecurityWebClient\", "{AA3532E0-1F80-4F48-93CD-CEA102DE564A}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.1"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_56243"
-		Debug.AspNetCompiler.PhysicalPath = "Security\WCFSecurityClient\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_56243\"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_61841"
+		Debug.AspNetCompiler.PhysicalPath = "Security\Windows-based\WCFSecurityWebClient\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_61841\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_56243"
-		Release.AspNetCompiler.PhysicalPath = "Security\WCFSecurityClient\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_56243\"
+		Release.AspNetCompiler.VirtualPath = "/localhost_61841"
+		Release.AspNetCompiler.PhysicalPath = "Security\Windows-based\WCFSecurityWebClient\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_61841\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "56243"
-		SlnRelativePath = "Security\WCFSecurityClient\"
+		VWDPort = "61841"
+		SlnRelativePath = "Security\Windows-based\WCFSecurityWebClient\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web-based", "Web-based", "{9C98FBD0-DFF8-4FD8-BBFD-17E6C6A39BDC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFSecurityLibraryWeb", "Security\Web-based\WCFSecurityLibraryWeb\WCFSecurityLibraryWeb.csproj", "{81E7CE16-CB98-4440-ADA4-5967E5224D6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfSecurityIisHost", "Security\Web-based\WcfSecurityIisHost\WcfSecurityIisHost.csproj", "{80D50F7E-E92D-439E-84B0-156E6A88AD0B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SecurityInWebApi", "SecurityInWebApi", "{8245B5E7-28B2-4BA7-94C9-C8864A5636A5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DbScript", "DbScript", "{A7329367-9EC4-4E89-904F-6D7008A29991}"
+	ProjectSection(SolutionItems) = preProject
+		WebApi\SecurityInWebApi\DbScript\script.sql = WebApi\SecurityInWebApi\DbScript\script.sql
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecureWebApiEg", "WebApi\SecurityInWebApi\SecureWebApiEg\SecureWebApiEg.csproj", "{2835B808-4780-499F-BAFF-E4A5602EAFB5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -295,10 +312,22 @@ Global
 		{344D8166-EF77-43D1-B7AE-F667DE312F2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{344D8166-EF77-43D1-B7AE-F667DE312F2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{344D8166-EF77-43D1-B7AE-F667DE312F2C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{20CED0FB-C76A-4085-ACA8-D734C97E1E10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{20CED0FB-C76A-4085-ACA8-D734C97E1E10}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{20CED0FB-C76A-4085-ACA8-D734C97E1E10}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{20CED0FB-C76A-4085-ACA8-D734C97E1E10}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{AA3532E0-1F80-4F48-93CD-CEA102DE564A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA3532E0-1F80-4F48-93CD-CEA102DE564A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA3532E0-1F80-4F48-93CD-CEA102DE564A}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA3532E0-1F80-4F48-93CD-CEA102DE564A}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{81E7CE16-CB98-4440-ADA4-5967E5224D6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81E7CE16-CB98-4440-ADA4-5967E5224D6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81E7CE16-CB98-4440-ADA4-5967E5224D6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81E7CE16-CB98-4440-ADA4-5967E5224D6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80D50F7E-E92D-439E-84B0-156E6A88AD0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80D50F7E-E92D-439E-84B0-156E6A88AD0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80D50F7E-E92D-439E-84B0-156E6A88AD0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80D50F7E-E92D-439E-84B0-156E6A88AD0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2835B808-4780-499F-BAFF-E4A5602EAFB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2835B808-4780-499F-BAFF-E4A5602EAFB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2835B808-4780-499F-BAFF-E4A5602EAFB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2835B808-4780-499F-BAFF-E4A5602EAFB5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -335,9 +364,16 @@ Global
 		{4FD15741-DE0C-4B64-9BE6-E3FD21EDD810} = {7A02DA89-1CF9-47B9-8B76-A77ACEC35BB0}
 		{5900FE7A-5383-4872-8555-0E33C71F9EFF} = {7A02DA89-1CF9-47B9-8B76-A77ACEC35BB0}
 		{74036F6D-82E3-451E-95B3-86DF1E105188} = {7A02DA89-1CF9-47B9-8B76-A77ACEC35BB0}
-		{3554B7D7-A7B2-449E-94FC-3BEC57EAE668} = {D0E59C92-B873-4AE0-BCE8-D493E28F8208}
-		{344D8166-EF77-43D1-B7AE-F667DE312F2C} = {D0E59C92-B873-4AE0-BCE8-D493E28F8208}
-		{20CED0FB-C76A-4085-ACA8-D734C97E1E10} = {D0E59C92-B873-4AE0-BCE8-D493E28F8208}
+		{C43A80A1-AA13-4848-8038-6660FAD575C0} = {D0E59C92-B873-4AE0-BCE8-D493E28F8208}
+		{3554B7D7-A7B2-449E-94FC-3BEC57EAE668} = {C43A80A1-AA13-4848-8038-6660FAD575C0}
+		{344D8166-EF77-43D1-B7AE-F667DE312F2C} = {C43A80A1-AA13-4848-8038-6660FAD575C0}
+		{AA3532E0-1F80-4F48-93CD-CEA102DE564A} = {C43A80A1-AA13-4848-8038-6660FAD575C0}
+		{9C98FBD0-DFF8-4FD8-BBFD-17E6C6A39BDC} = {D0E59C92-B873-4AE0-BCE8-D493E28F8208}
+		{81E7CE16-CB98-4440-ADA4-5967E5224D6A} = {9C98FBD0-DFF8-4FD8-BBFD-17E6C6A39BDC}
+		{80D50F7E-E92D-439E-84B0-156E6A88AD0B} = {9C98FBD0-DFF8-4FD8-BBFD-17E6C6A39BDC}
+		{8245B5E7-28B2-4BA7-94C9-C8864A5636A5} = {3A5E36D9-F844-447D-AD6A-3929126B1ADB}
+		{A7329367-9EC4-4E89-904F-6D7008A29991} = {8245B5E7-28B2-4BA7-94C9-C8864A5636A5}
+		{2835B808-4780-499F-BAFF-E4A5602EAFB5} = {8245B5E7-28B2-4BA7-94C9-C8864A5636A5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {95E62836-FAB0-450B-9353-2300D582A218}
