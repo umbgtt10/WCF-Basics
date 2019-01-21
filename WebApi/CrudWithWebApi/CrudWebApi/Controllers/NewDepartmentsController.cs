@@ -6,51 +6,47 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Description;
 using CrudLibrary;
 
 namespace CrudWebApi.Controllers
 {
-    public class DepartmentsController : ApiController
+    public class NewDepartmentsController : ApiController
     {
         private MyOrgContext _context = new MyOrgContext();
 
         // ..api/Departments
-        public HttpResponseMessage Get()
+        [ResponseType(typeof(IEnumerable<Department>))]
+        public IHttpActionResult Get()
         {
-            return Request.CreateResponse<IEnumerable<Department>>(
-                HttpStatusCode.OK,
-                _context.Departments.ToList());
+            return Ok(_context.Departments.ToList());
         }
 
         // ..api/Departments/id
-        public HttpResponseMessage Get(int id)
+        [ResponseType(typeof(Department))]
+        public IHttpActionResult Get(int id)
         {
             var department = _context.Departments.Find(id);
 
             if (department == null)
             {
-                return Request.CreateErrorResponse(
-                    HttpStatusCode.NotFound,
-                    $"Department with id:{id} not found.");
+                return NotFound();
             }
             else
             {
-                return Request.CreateResponse(
-                    HttpStatusCode.OK,
-                    department);
+                return Ok(department);
             }
         }
 
         // ..api/Departments/id
-        public HttpResponseMessage Put(int id, Department department)
+        [ResponseType(typeof(Department))]
+        public IHttpActionResult Put(int id, Department department)
         {
             var existingDepartment = _context.Departments.Find(id);
 
             if (existingDepartment == null)
             {
-                return Request.CreateErrorResponse(
-                    HttpStatusCode.NotFound,
-                    $"Department with id:{id} not found.");
+                return NotFound();
             }
             else
             {
@@ -58,37 +54,37 @@ namespace CrudWebApi.Controllers
                 existingDepartment.DName = department.DName;
                 existingDepartment.HOD = department.HOD;
                 _context.SaveChanges();
-                return Request.CreateResponse(HttpStatusCode.OK, department);
+                return Ok(department);
             }
         }
 
         // ..api/Departments/id
-        public HttpResponseMessage Delete(int id)
+        [ResponseType(typeof(Department))]
+        public IHttpActionResult Delete(int id)
         {
             var department = _context.Departments.Find(id);
 
             if (department == null)
             {
-                return Request.CreateErrorResponse(
-                    HttpStatusCode.NotFound,
-                    $"Department with id:{id} not found.");
+                return NotFound();
             }
             else
             {
                 _context.Departments.Remove(department);
                 _context.SaveChanges();
-                return Request.CreateResponse(HttpStatusCode.OK, department);
+                return Ok(department);
             }
         }
 
         // ..api/Departments
-        public HttpResponseMessage Post(Department department)
+        [ResponseType(typeof(Department))]
+        public IHttpActionResult Post(Department department)
         {
             try
             {
                 _context.Departments.Add(department);
                 _context.SaveChanges();
-                return Request.CreateResponse(HttpStatusCode.Created, department);
+                return CreatedAtRoute("DefaultApi", new {id = department.Did}, department);
             }
             catch (Exception e)
             {
@@ -97,10 +93,8 @@ namespace CrudWebApi.Controllers
                     d.Gender.Equals(department.Gender) &&
                     d.HOD.Equals(department.Gender));
 
-                return Request.CreateErrorResponse(
-                    HttpStatusCode.BadRequest, $"Department with id:{existingDepartment.Did} already present.");
+                return BadRequest($"Department with id:{existingDepartment.Did} already present.");
             }
-
         }
     }
 }
