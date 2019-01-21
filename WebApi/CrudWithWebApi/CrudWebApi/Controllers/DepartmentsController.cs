@@ -38,7 +38,8 @@ namespace CrudWebApi.Controllers
         // ..api/Departments/id
         public void Put(int id, Department department)
         {
-            _context.Entry(department).State = EntityState.Modified;
+            var oldDepartment = _context.Departments.Find(id);
+            _context.Entry(oldDepartment).CurrentValues.SetValues(department);
             _context.SaveChanges();
         }
 
