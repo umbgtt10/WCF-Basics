@@ -22,11 +22,70 @@
           </xs:sequence>
         </xs:complexType>
       </xs:element>
+      <xs:element name="ResponseFile">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q2="http://schemas.microsoft.com/Message" name="FileByteStream" type="q2:StreamBody" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ByteStart" type="xs:long" />
+      <xs:element name="FileName" nillable="true" type="xs:string" />
+      <xs:element name="Length" type="xs:long" />
+      <xs:element name="RequestFile">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="ByteStart" type="xs:long" />
+            <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
     </xs:schema>
     <xs:schema xmlns:tns="http://schemas.microsoft.com/Message" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/Message" xmlns:xs="http://www.w3.org/2001/XMLSchema">
       <xs:simpleType name="StreamBody">
         <xs:restriction base="xs:base64Binary" />
       </xs:simpleType>
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="anyType" nillable="true" type="xs:anyType" />
+      <xs:element name="anyURI" nillable="true" type="xs:anyURI" />
+      <xs:element name="base64Binary" nillable="true" type="xs:base64Binary" />
+      <xs:element name="boolean" nillable="true" type="xs:boolean" />
+      <xs:element name="byte" nillable="true" type="xs:byte" />
+      <xs:element name="dateTime" nillable="true" type="xs:dateTime" />
+      <xs:element name="decimal" nillable="true" type="xs:decimal" />
+      <xs:element name="double" nillable="true" type="xs:double" />
+      <xs:element name="float" nillable="true" type="xs:float" />
+      <xs:element name="int" nillable="true" type="xs:int" />
+      <xs:element name="long" nillable="true" type="xs:long" />
+      <xs:element name="QName" nillable="true" type="xs:QName" />
+      <xs:element name="short" nillable="true" type="xs:short" />
+      <xs:element name="string" nillable="true" type="xs:string" />
+      <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte" />
+      <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt" />
+      <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong" />
+      <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort" />
+      <xs:element name="char" nillable="true" type="tns:char" />
+      <xs:simpleType name="char">
+        <xs:restriction base="xs:int" />
+      </xs:simpleType>
+      <xs:element name="duration" nillable="true" type="tns:duration" />
+      <xs:simpleType name="duration">
+        <xs:restriction base="xs:duration">
+          <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?" />
+          <xs:minInclusive value="-P10675199DT2H48M5.4775808S" />
+          <xs:maxInclusive value="P10675199DT2H48M5.4775807S" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="guid" nillable="true" type="tns:guid" />
+      <xs:simpleType name="guid">
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:attribute name="FactoryType" type="xs:QName" />
+      <xs:attribute name="Id" type="xs:ID" />
+      <xs:attribute name="Ref" type="xs:IDREF" />
     </xs:schema>
   </wsdl:types>
   <wsdl:message name="IStreamService_GetLargeObject_InputMessage">
@@ -35,10 +94,30 @@
   <wsdl:message name="IStreamService_GetLargeObject_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetLargeObjectResponse" />
   </wsdl:message>
+  <wsdl:message name="ResponseFile">
+    <wsdl:part name="parameters" element="tns:ResponseFile" />
+  </wsdl:message>
+  <wsdl:message name="ResponseFile_Headers">
+    <wsdl:part name="ByteStart" element="tns:ByteStart" />
+    <wsdl:part name="FileName" element="tns:FileName" />
+    <wsdl:part name="Length" element="tns:Length" />
+  </wsdl:message>
+  <wsdl:message name="IStreamService_UploadFile_OutputMessage" />
+  <wsdl:message name="RequestFile">
+    <wsdl:part name="parameters" element="tns:RequestFile" />
+  </wsdl:message>
   <wsdl:portType name="IStreamService">
     <wsdl:operation name="GetLargeObject">
       <wsdl:input wsaw:Action="http://tempuri.org/IStreamService/GetLargeObject" message="tns:IStreamService_GetLargeObject_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IStreamService/GetLargeObjectResponse" message="tns:IStreamService_GetLargeObject_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStreamService/UploadFile" name="ResponseFile" message="tns:ResponseFile" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStreamService/UploadFileResponse" message="tns:IStreamService_UploadFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStreamService/DownloadFile" name="RequestFile" message="tns:RequestFile" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStreamService/DownloadFileResponse" name="ResponseFile" message="tns:ResponseFile" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IStreamService" type="tns:IStreamService">
@@ -50,6 +129,30 @@
         <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadFile">
+      <soap:operation soapAction="http://tempuri.org/IStreamService/UploadFile" style="document" />
+      <wsdl:input name="ResponseFile">
+        <soap:header message="tns:ResponseFile_Headers" part="ByteStart" use="literal" />
+        <soap:header message="tns:ResponseFile_Headers" part="FileName" use="literal" />
+        <soap:header message="tns:ResponseFile_Headers" part="Length" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFile">
+      <soap:operation soapAction="http://tempuri.org/IStreamService/DownloadFile" style="document" />
+      <wsdl:input name="RequestFile">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ResponseFile">
+        <soap:header message="tns:ResponseFile_Headers" part="ByteStart" use="literal" />
+        <soap:header message="tns:ResponseFile_Headers" part="FileName" use="literal" />
+        <soap:header message="tns:ResponseFile_Headers" part="Length" use="literal" />
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>

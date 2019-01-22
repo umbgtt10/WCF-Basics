@@ -12,6 +12,12 @@ namespace WcfStreamingLibrary
     {
         [OperationContract]
         Stream GetLargeObject();
+
+        [OperationContract()]
+        void UploadFile(ResponseFile request);
+
+        [OperationContract]
+        ResponseFile DownloadFile(RequestFile request);
     }
 }
     

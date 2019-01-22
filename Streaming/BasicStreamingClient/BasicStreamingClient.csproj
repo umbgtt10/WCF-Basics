@@ -55,6 +55,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Connected Services\WcfStreamingServiceReference\BasicStreamingClient.WcfStreamingServiceReference.ResponseFile.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WcfStreamingServiceReference\BasicStreamingClient.WcfStreamingServiceReference.UploadFileResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\WcfStreamingServiceReference\StreamService.wsdl" />
   </ItemGroup>
   <ItemGroup>
