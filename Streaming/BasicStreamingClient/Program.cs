@@ -46,7 +46,7 @@ namespace BasicStreamingClient
 
                 long length = client.DownloadFile(ref byteStart, ref fileName, out inputStream);
 
-                using (FileStream writeStream = new System.IO.FileStream(@"8MM [1999] [ENG].avi", FileMode.OpenOrCreate, FileAccess.Write))
+                using (FileStream writeStream = new FileStream(@"8MM [1999] [ENG].avi", FileMode.OpenOrCreate, FileAccess.Write))
                 {
 
                     int chunkSize = 2048;

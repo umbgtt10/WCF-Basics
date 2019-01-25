@@ -216,12 +216,6 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WcfSecurityWebClientWithAut
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Observer", "C:\Users\Umberto\source\repos\Observer\Observer.csproj", "{3145282E-EED6-40ED-83EC-B192145AF3B7}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bridge", "Bridge\Bridge.csproj", "{7686EFD4-6C07-4A36-9DFA-7898E01DD871}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chain", "Chain\Chain.csproj", "{728F6FD8-8678-4093-8F4E-DF96B6CB68B5}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Streaming", "Streaming", "{1B3BCE24-FA57-4FCA-BC79-824CBCF4D24D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfStreamingLibrary", "Streaming\WcfStreamingLibrary\WcfStreamingLibrary.csproj", "{71DCB485-DF1A-44FE-8BF0-3A9DCA4DCB5D}"
@@ -371,18 +365,6 @@ Global
 		{0EBBD793-B086-4F96-AE0A-19D30D817D5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0EBBD793-B086-4F96-AE0A-19D30D817D5D}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{0EBBD793-B086-4F96-AE0A-19D30D817D5D}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{3145282E-EED6-40ED-83EC-B192145AF3B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3145282E-EED6-40ED-83EC-B192145AF3B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3145282E-EED6-40ED-83EC-B192145AF3B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3145282E-EED6-40ED-83EC-B192145AF3B7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7686EFD4-6C07-4A36-9DFA-7898E01DD871}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7686EFD4-6C07-4A36-9DFA-7898E01DD871}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7686EFD4-6C07-4A36-9DFA-7898E01DD871}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7686EFD4-6C07-4A36-9DFA-7898E01DD871}.Release|Any CPU.Build.0 = Release|Any CPU
-		{728F6FD8-8678-4093-8F4E-DF96B6CB68B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{728F6FD8-8678-4093-8F4E-DF96B6CB68B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{728F6FD8-8678-4093-8F4E-DF96B6CB68B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{728F6FD8-8678-4093-8F4E-DF96B6CB68B5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{71DCB485-DF1A-44FE-8BF0-3A9DCA4DCB5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{71DCB485-DF1A-44FE-8BF0-3A9DCA4DCB5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71DCB485-DF1A-44FE-8BF0-3A9DCA4DCB5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
